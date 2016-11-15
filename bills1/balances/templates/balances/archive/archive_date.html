@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+
+Lista sald: <br><br>
+<ul>
+{% for balance in balances %}
+   <li> <a href="/archive/{{date}}/{{balance.name}}/" > {{balance.name}}  </a></li>
+    <br>
+{%endfor%}
+</ul>
+
+{% endblock %}

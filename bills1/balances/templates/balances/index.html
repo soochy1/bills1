@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+
+{%block 'content' %}
+<div id= "buttons">
+
+<div id="site_name" > GŁÓWNE MENU </div>
+
+
+<div id="description"> <br><br>wybierz co chcesz zrobić:<br><br> </div>
+
+<div id= "buttons">
+<form method="get" action="/agreements">
+    <button type="submit" class="css3button"> Przeglądaj <br> umowy </button> 
+</form>
+
+<form method="get" action="/counters">
+<button type="submit" class="css3button">Aktualizuj <br> liczniki </button>
+</form>
+
+<form method="get" action="/update_payments">
+<button type="submit"" class="css3button">Przelicz <br> wpłaty </button>
+</form>
+
+
+<form method="get" action="/update_balances">
+<button type="submit"" class="css3button">Przelicz <br> nowy miesiąc </button>
+</form>
+
+<form method="get" action="/mail">
+<button type="submit" class="css3button"> Wyślij <br>rozliczenia </button>
+</form>
+
+<form method="get" action="/archive">
+<button type="submit" class="css3button"> Archiwum </button>  </a>
+</form>
+</div>
+
+
+{% endblock %}

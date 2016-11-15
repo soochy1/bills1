@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+
+saldo archiwalne: <br><br>
+
+<h1>UMOWA: {{balance.name}}</h1><br><br>
+WODA: {{balance.water|floatformat }}<br>
+GAZ: {{balance.gas|floatformat}}<br>
+PRĄD: {{balance.electricity|floatformat}}<br>
+INTERNET: {{balance.internet}}<br>
+ŚMIECI: {{balance.trashes}}<br><br>
+
+ŁĄCZNIE MEDIA: {{balance.total|floatformat}}<br>
+WPŁATA ZA OSTANI MIESIĄC: {{balance.prev_month_payment}}<br>
+BILANS: {{balance.balance|floatformat}}<br>
+
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block 'content' %}
+
+<H2>szczegóły dla umowy :   {{agreement.name }}</H2>
+
+<BR><BR>
+    SALDO RACHUNKÓW:<BR><BR>
+ woda   {{ balance.water|floatformat }} zł<BR><BR>
+ gaz   {{ balance.gas|floatformat }} zł<BR><BR>
+ prąd   {{ balance.electricity|floatformat }} zł<BR><BR>
+ internet {{ balance.internet }} zł<BR><BR>
+ śmieci {{ balance.trashes }} zł<BR><BR>
+ saldo łącznie {{ balance.total|floatformat }} zł
+<BR><BR>
+bilans opłat czynszu w poprzednim miesiacu: {{balance.prev_month_payment}}
+
+    <BR><BR>
+    bilans opłat za media na dzień dzisiejszy: {{ balance.balance|floatformat  }} zł
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+<div id=agreement_list >
+Lista umów : <br><br>
+
+
+{% for agreement in Agreements_list %}
+    <a href="/agreements/agreement_detail/{{ agreement.id }}" > {{agreement.name}}  </a>
+    <br><br>
+{%endfor%}
+
+</div>
+
+{% endblock %}

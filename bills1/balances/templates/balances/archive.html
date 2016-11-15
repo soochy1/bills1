@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+
+Lista wpisow: <br><br>
+<ul>
+{% for date in entrys %}
+   <li> <a href="/archive/{{date}}/" > {{date}}  </a></li>
+    <br>
+{%endfor%}
+</ul>
+
+{% endblock %}
